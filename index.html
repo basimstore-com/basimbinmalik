@@ -47,7 +47,7 @@
     padding: 60px 24px 80px;
   }
 
-  /* ── MONOGRAM HERO ── */
+  /* ── PROFILE HERO ── */
   .hero {
     display: flex;
     flex-direction: column;
@@ -56,13 +56,13 @@
     margin-bottom: 56px;
   }
 
-  .monogram-ring {
+  .profile-wrap {
     position: relative;
     width: 130px;
     height: 130px;
   }
 
-  .monogram-ring svg.ring {
+  .profile-wrap svg.ring {
     position: absolute;
     inset: 0;
     animation: spin 8s linear infinite;
@@ -70,26 +70,20 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .monogram-inner {
+  .profile-img-wrap {
     position: absolute;
-    inset: 12px;
-    background: linear-gradient(135deg, #151820, #0f1016);
+    inset: 10px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 40px rgba(0,212,255,0.15), inset 0 0 20px rgba(0,0,0,0.6);
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(201,168,76,0.25), 0 0 60px rgba(0,212,255,0.1);
   }
 
-  .monogram-inner span {
-    font-family: 'Cinzel', serif;
-    font-weight: 900;
-    font-size: 32px;
-    background: linear-gradient(135deg, var(--gold), var(--gold2), var(--gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 2px;
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .hero-name {
@@ -359,9 +353,9 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="monogram-ring">
+    <div class="profile-wrap">
       <svg class="ring" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="65" cy="65" r="60" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.7"/>
+        <circle cx="65" cy="65" r="60" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.8"/>
         <defs>
           <linearGradient id="ringGrad" x1="0" y1="0" x2="130" y2="130" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stop-color="#00D4FF"/>
@@ -370,8 +364,12 @@
           </linearGradient>
         </defs>
       </svg>
-      <div class="monogram-inner">
-        <span>BBM</span>
+      <div class="profile-img-wrap">
+        <img
+          src="https://raw.githubusercontent.com/basimstore-com/basimbinmalikimage/main/Picsart_25-03-07_06-23-27-459.jpg"
+          alt="Basim Bin Malik"
+          class="profile-img"
+        />
       </div>
     </div>
 
